@@ -1,0 +1,44 @@
+.square {
+    background-color: #EEEED2;
+    width: 70px;
+    height: 70px;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    height: 560px;
+    /* 70px*8 = 560px */
+    width: 560px;
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.dad-container{
+    display:flex ;
+    /* if you need to make anything chentre uska parent div ko flex krna hoga */
+    align-items: center;  
+    /* This property aligns the flex items vertically within the flex container. In this case, it centers the .main-container vertically within the .dad-container.*/
+    justify-content: center;
+    /*
+    This property aligns the flex items horizontally within the flex container. It centers the .main-container horizontally within the .dad-container.
+    */
+    margin: 2rem;
+}
+.files:nth-of-type(odd) .square:nth-of-type(odd) {
+    background-color: #769656;
+    /* thing to note there is green box in the odd colums in odd position (view top one as 1 ) */
+}
+
+
+.files:nth-of-type(even) .square:nth-of-type(even) {
+    background-color: #769656;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* The object-fit property specifies how an <img> or <video> should be resized to fit its container. */
+}
+ 
